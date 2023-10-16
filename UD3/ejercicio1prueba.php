@@ -1,32 +1,28 @@
-<?php
-
-$num1=$_GET["numero1"];
-$num2=$_Get["numero2"];
-$suma=$num1+$num2;
-
-/**
- * 
-@author Juanma Herrera
-*/
-?>
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>
-    Juanma Herrera
-  </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/ejercicios_arrays.css" title="Color">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma</title>
 </head>
-
 <body>
-  <h1>SUMA DE DOS NUMEROS</h1>
-  <?php 
-        echo "El resultado de sumar" . $num1 . "+" .$num2 . "es:" . $suma;?>
-  <footer>
-    <p>Juanma Herrera</p>
-  </footer>
+    <form action="prueba_formulario.php" method="POST">
+    <input name="num1" type="number">
+        <input name="num2" type="number">
+        <input type="submit">
+        <select name="operacion">
+            <option value="sumar"> sumar </option>
+            <option value="restar"> restar </option>
+            <option value="multiplicar"> multiplicar </option>
+            <option value="dividir"> dividir </option>
+        </select>
+    </form>
 </body>
-</html>
+</html><?php
+    if(isset($_POST["num1"])){
+        $numero1 = $_POST["num1"];
+    }
+    if(isset($_POST["num2"])){
+        $numero2 = $_POST["num2"];
+    }
+?>
