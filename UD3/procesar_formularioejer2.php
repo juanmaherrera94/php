@@ -11,13 +11,3 @@ if (!is_numeric($altura) || !is_numeric($diametro)) {
     echo "El volumen del cilindro es: " . $volumen;
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultado del Cálculo</title>
-</head>
-<body>
-</body>
-</html>
