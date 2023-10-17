@@ -8,7 +8,7 @@
         $tamanio = $_POST['tamanio'];
         $extras = isset($_POST['extras']) ? $_POST['extras'] : array();
         $observaciones = $_POST['observaciones'];
-        echo "Tipo: " . $tipo_vivienda . "<br>";
+        echo "Tipo: " . $tipo_vivienda ."<br>";
         echo "Zona: " . $zona . "<br>";
         echo "Dirección: " . $direccion . "<br>";
         echo "Número de Dormitorios: " . $num_dormitorios . "<br>";

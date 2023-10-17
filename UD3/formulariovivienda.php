@@ -37,8 +37,8 @@
             <tr>
                 <td>Número de Dormitorios (1-5):</td>
                 <td> 
-                <input type="radio" name="num_dormitorios" value="1">1
-                <input type="radio" name="num_dormitorios" value="2">2
+                <input type="radio" name="num_dormitorios" value="1" checked="">1
+                <input type="radio" name="num_dormitorios" value="2">2 
                 <input type="radio" name="num_dormitorios" value="3">3
                 <input type="radio" name="num_dormitorios" value="4">4
                 <input type="radio" name="num_dormitorios" value="5">5
