@@ -7,26 +7,30 @@
 </head>
 
 <body>
+    <p>Esta es su fruta favorita:</p>
+    <br>
     <?php
     if (isset($_POST['fruta'])) {
         $frutaSeleccionada = $_POST['fruta'];
-
-        echo "<h1>Has seleccionado $frutaSeleccionada</h1>";
-
         if ($frutaSeleccionada === 'manzana') {
             echo '<img src="img/frutas/manzana.svg" alt="Manzana" class="imagen">';
-        } elseif ($frutaSeleccionada === 'platano') {
-            echo '<img src="ruta/a/tus/imagenes/platano.jpg" alt="Plátano">';
-        } elseif ($frutaSeleccionada === 'uva') {
-            echo '<img src="ruta/a/tus/imagenes/uva.jpg" alt="Uva">';
-        } elseif ($frutaSeleccionada === 'naranja') {
-            echo '<img src="ruta/a/tus/imagenes/naranja.jpg" alt="Naranja">';
-        } else {
+        } elseif ($frutaSeleccionada === 'cereza') {
+            echo '<img src="img/frutas/cerezas.svg" alt="Cereza" class="imagen">';
+        } elseif ($frutaSeleccionada === 'fresa') {
+            echo '<img src="img/frutas/fresa.svg" alt="Fresa" class="imagen">';
+        } elseif ($frutaSeleccionada === 'limon') {
+            echo '<img src="img/frutas/limon.svg" alt="Limon" class="imagen">';
+        } elseif ($frutaSeleccionada=== 'naranja') {
+            echo '<img src="img/frutas/naranja.svg" alt="Naranja" class="imagen">';
+        }elseif($frutaSeleccionada=== 'pera'){
+            echo '<img src="img/frutas/pera.svg" alt="Pera" class="imagen">';
+        }else {
             echo "<p>Fruta no válida</p>";
         }
     } else {
         echo "<p>No has seleccionado ninguna fruta</p>";
     }
     ?>
+    <p><a href="ejercicio6.html">Volver al formulario</a></p>
 </body>
 </html>
