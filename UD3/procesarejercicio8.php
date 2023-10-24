@@ -8,8 +8,7 @@ function recoge($var) {
 }
 $nombre = recoge("nombre");
 $apellidos = recoge("apellidos");
-$nombreBien=false;
-$apellidoBien=false;
+
 if(empty($nombre) || empty($apellidos)){
  echo "Los campos no pueden estar vacios";
 }else{
