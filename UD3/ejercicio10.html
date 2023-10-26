@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>
+    Ejercicio 10.  Juanma Herrera
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://educacionadistancia.juntadeandalucia.es/centros/jaen/pluginfile.php/331473/mod_assign/introattachment/0/ejercicios-formularios.css" >
+</head>
+
+<body>
+  <h1>Ejercicio 10</h1>
+
+  <form action="procesar_ejercicio10.php" method="post">
+        <label for="Sexo">Sexo</label>
+        <input type="radio" id="sexo" name="sexo" value="Hombre">Hombre
+        <input type="radio" id="sexo"  name="sexo" value="Mujer">Mujer
+        <br>
+        <label for="Aficciones">Aficciones</label>
+        <input type="checkbox" id="aficcion" name=aficcion[] value="Futbol">Futbol
+        <input type="checkbox" id="aficcion" name=aficcion[] value="Cine">Cine
+        <input type="checkbox" id="aficcion" name=aficcion[] value="Senderismo">Senderismo        
+        <br>
+        <input type="submit" value="Enviar">
+      <input type="reset" value="Borrar">
+    </p>
+  </form>
+
+  <footer>
+    <p>Juanma Herrera</p>
+  </footer>
+
+</body>
+</html>
