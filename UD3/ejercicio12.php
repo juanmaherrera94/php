@@ -1,3 +1,27 @@
+<?php
+$msg="";
+if(isset($_POST["bcrear"])){
+  $segundos=(int)$_POST["segundos"];
+  $sumaSegundos=time()+$segundos;
+  setcookie("cookie",$sumaSegundos,$sumaSegundos);
+  $msg="Se ha creado la cookie y se destruira en $segundos segundos";
+}
+if(isset($_POST["bcomprobar"])){
+  if(isset($_COOKIE["cookie"])){
+      $expira=$_COOKIE["cookie"];
+      $restar=$expira-time();
+      $msg= "La cookie se destruira en $restar segundos ";
+  }else{
+    $msg= "La cookie no existe";
+  }
+}
+if(isset($_POST["bdestruir"])){
+  if(isset($_COOKIE["cookie"])){
+    setcookie("cookie2","",time()-3600);
+    $msg= "Se ha destruido la cookie";
+  }
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,12 +35,15 @@
 
 <body>
   <h1>CREACION Y DESTRUCCION DE COOKIES</h1>
+  <?php
+  echo $msg;
+  ?>
 
   <form action="ejercicio12.php" method="post">
     
     <p>Eliga una opcion</p>
     <ul>
-        <li>Crear una cookie con una duracion de <input type="text" size="1">segundo (entre 1 y 60)<input type="submit" name="bcrear" value="crear"></li>
+        <li>Crear una cookie con una duracion de <input type="text" name="segundos" size="1">segundo (entre 1 y 60)<input type="submit" name="bcrear" value="crear"></li>
         <li>Comprobar la cookie <input type="submit" name="bcomprobar" value="Comprobar"></li>
         <li>Destruir la cookie <input type="submit" name="bdestruir" value="Destruir"> </li>
     </ul>
