@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Juanma Herrera - Examen Validación de Formularios, Cookies y Sesiones</title>
+   
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+    <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link rel="stylesheet" href="css/tooplate-style.css">
+    <!-- tooplate style -->
+
+ 
+</head>
+
+<body>
+
+    <div class="container">
+        <section class="tm-section-head" id="top">
+            <header id="header" class="text-center tm-text-gray">
+                <h1>Formulario de registro</h1>
+            </header>
+
+            <nav class="navbar narbar-light">
+                <a class="navbar-brand tm-text-gray" href="#">
+                    Menu
+                </a>
+                <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <i class="fa fa-navicon tm-fa-toggler-icon"></i>
+                    </span>
+                </button>
+                <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link tm-text-gray" href="login.html">Inicio de sesión
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link tm-text-gray" href="formulario_registro.html">Formulario de registro</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </nav>
+
+        </section>
+
+      
+        <section class="tm-section-12" id="tm-section-12">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-xs-4"></div>
+                <div class="col-lg-8 col-md-8 col-xs-8">
+                    <div class="contact_message">
+
+
+                    <form action="validacion.php" method="post">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre">
+                        <br>
+                        <label for="correo">Correo Electronico</label>
+                        <input type="email" name="correo" id="correo">
+                        <br>
+                        <label for="pass">Contraseña</label>
+                        <input type="password" name="pass" id="pass">
+                        <br>
+                        <label for="pass2">Repite Contraseña</label>
+                        <input type="password" name="pass2" id="pass2">
+                        <br>
+                        <label for="fecha">Fecha de nacimiento</label>
+                        <input type="date" name="fecha" id="fecha">
+                        <br>
+                        <select name="genero">
+                            <option value="hombre">Hombre</option>
+                            <option value="mujer">Mujer</option>
+                        </select>
+                        <br>
+                        <label for="acepto">Acepto los terminos y condiciones</label>
+                        <input type="checkbox" name="acepto" id="acepto">
+                        <br>
+                        <input type="submit" name="enviar" value="Enviar">
+                    </form> 
+
+
+                    </div>
+                </div>
+               
+            </div>
+        </section>
+        <footer class="mt-5">
+            <p class="text-center">Examen DWES 2/11/2023 Juanma Herrera</p>
+        </footer>
+    </div>
+
+    <!-- load JS files -->
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <!-- https://popper.js.org/ -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- https://getbootstrap.com/ -->
+    
+</body>
+
+</html>
