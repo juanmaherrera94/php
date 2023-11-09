@@ -1,22 +1,24 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $usuario = $_POST["Nombre"];
-    $clave = $_POST["Pass"];
+$usuario = $_POST["Nombre"];
+$clave = $_POST["Pass"];
+$conexion = "mysql:host=127.0.0.1;dbname=empresa";
+$password = "";
+try {
+    $bd = new PDO($conexion, $usser, $password);
+    echo "Conexión realizada con éxito" . "<br>";
 
-    try {
-        $conex = new PDO("mysql:host=127.0.0.1;dbname=empresa", "usuario", "clave");
-        $conex->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $sql = $bd->prepare("SELECT * FROM usuarios WHERE nombre = :usuario AND clave = :clave");
+    $sql->bindParam(":usuario",$usuario, PDO::PARAM_STR);
+    $sql->bindParam(":clave", $clave, PDO::PARAM_STR);
+    $sql->execute();
 
-        $sql = "SELECT * FROM usuarios WHERE nombre = '$usuario' AND clave = '$clave'";
-        $result = $conex->query($sql);
-
-        if ($result->rowCount() > 0) {
-            echo "Acceso concedido. ¡Bienvenido, $usuario!";
-        } else {
-            echo "Usuario o contraseña incorrectos. Por favor, intenta de nuevo.";
-        }
-    } catch (PDOException $e) {
-        echo "Error al conectarse a la base de datos: " . $e->getMessage();
+    if ($sql->rowCount() > 0) {
+        echo "Inicio de sesión correcto" ;
+    } else {
+        echo "Error al iniciar sesión";
     }
+
+} catch (PDOException $e) {
+    echo "Error en la base de datos: " . $e->getMessage();
 }
 ?>
